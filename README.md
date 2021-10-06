@@ -14,6 +14,8 @@ Here I put all of my fabourite fonts that I use while I'm coding! Here you will 
 - Operator Mono Lig
 - DejaVu Sans Mono
 - JetBrains Mono
+- Muli-v12
+- Open-sans-v15
 - Roboto Mono
 - Ubuntu Mono
 - Victor Mono
