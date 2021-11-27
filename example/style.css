@@ -1,0 +1,121 @@
+/* Local Variable Fonts */
+@font-face {
+  font-family: "Montserrat Variable";
+  src: url("./assets/fonts/variable/Montserrat-VF-subset.woff2") format("woff2");
+  font-style: normal; /* Normal style */
+  font-weight: 100 900; /* Weight lower and higher values */
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Montserrat Variable";
+  src: url("./assets/fonts/variable/Montserrat-Italic-VF-subset.woff2")
+    format("woff2");
+  font-style: italic; /* Italic style */
+  font-weight: 100 900;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Playfair Display Variable";
+  src: url("./assets/fonts/variable/PlayfairDisplay-VF-subset.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400 900; /* This font starts at weight 400 */
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Playfair Display Variable";
+  src: url("./assets/fonts/variable/PlayfairDisplay-Italic-VF-subset.woff2")
+    format("woff2");
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: fallback;
+}
+
+/* Local Static Fonts */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("./assets/fonts/static/montserrat-v14-latin-regular.woff2")
+      format("woff2"),
+    url("./assets/fonts/static/montserrat-v14-latin-regular.woff")
+      format("woff");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"),
+    url("./assets/fonts/static/montserrat-v14-latin-600.woff2") format("woff2"),
+    url("./assets/fonts/static/montserrat-v14-latin-600.woff") format("woff");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/static/playfair-display-v20-latin-500.woff2")
+      format("woff2"),
+    url("./assets/fonts/static/playfair-display-v20-latin-500.woff")
+      format("woff");
+  font-display: fallback;
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/static/playfair-display-v20-latin-700.woff2")
+      format("woff2"),
+    url("./assets/fonts/static/playfair-display-v20-latin-700.woff")
+      format("woff");
+  font-display: fallback;
+}
+
+/* Static Fonts by default */
+:root {
+  --font-sans: "Montserrat";
+  --font-display: "Playfair Display";
+}
+
+/* Variable Fonts for compatible browsers */
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-sans: "Montserrat Variable";
+    --font-display: "Playfair Display Variable";
+  }
+}
+
+/* Default font-family */
+body {
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Headings font-family */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display), serif;
+}
+
+/* All styles below are for decorative purpose only */
+main {
+  display: flex;
+  height: 100vh;
+  color: #515151;
+  padding: 1rem;
+}
+
+.flow {
+  margin: auto;
+}
+.flow > * + * {
+  margin-top: 1em;
+}
+.flow > p + p {
+  margin-top: 0.6em;
+}
